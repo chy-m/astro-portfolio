@@ -1,0 +1,50 @@
+<div id="heartWrapper">
+  <span id="heart"></span>
+</div>
+<style>
+  #heartWrapper {
+    width: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+    animation: pulse 1s infinite;
+  }
+
+  #heart {
+    width: 20px;
+    height: 20px;
+  }
+
+  #heart:before,
+  #heart:after {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 0;
+    width: 10px;
+    height: 16px;
+    background: #f25f5f;
+    border-radius: 5px 5px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    animation: pulsecolor 1s infinite;
+  }
+
+  #heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    animation: pulsecolor 1s infinite;
+  }
+
+  @keyframes pulse {
+    10% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes pulsecolor {
+    10% {
+      background: #f85e5e;
+    }
+  }
+</style>

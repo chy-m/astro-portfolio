@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Heart from "../components/Heart.astro";
 import { Image } from "@astrojs/image/components";
-import avatar from "../assets/avatar.png";
+import avatar from "../assets/avatar.webp";
 ---
 
 <Layout title="Chy Meng">
@@ -15,7 +15,7 @@ import avatar from "../assets/avatar.png";
       </h1>
       <Image
         src={avatar}
-        format="png"
+        format="webp"
         alt="chy avatar"
         class="w-28 rounded-full bg-orange-100"
       />
@@ -38,13 +38,19 @@ import avatar from "../assets/avatar.png";
       <h2 class="text-xl font-bold mb-2">Contact me</h2>
       <ul class="list-none leading-loose">
         <li class="text-pink">
-          <a href="https://www.w3schools.com" target="_blank">Email</a>
+          <a
+            href="mailto:chymeng24@gmail.com?Subject=Saying%20hello"
+            target="_blank">Email</a
+          >
         </li>
         <li class="text-pink">
-          <a href="https://www.w3schools.com" target="_blank">Github</a>
+          <a href="https://github.com/chy-m" target="_blank">Github</a>
         </li>
         <li class="text-pink">
-          <a href="https://www.w3schools.com" target="_blank">Linked In</a>
+          <a
+            href="https://www.linkedin.com/in/chy-meng-6323b8a7"
+            target="_blank">Linked In</a
+          >
         </li>
       </ul>
     </section>

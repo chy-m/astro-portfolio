@@ -1,67 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Heart from "../components/Heart.astro";
-import { Image } from "@astrojs/image/components";
-import avatar from "../assets/avatar.webp";
+import Header from "../components/Header.astro";
+import Body from "../components/Body.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Chy Meng">
   <main>
-    <div class="flex flex-wrap items-center mb-8">
-      <h1
-        class="text-2xl md:text-5xl font-extrabold leading-tight mr-7 transition ease-in"
-      >
-        👋 Hello, <span class="whitespace-nowrap bg-pink rounded-xl p-1">
-          I'm Chy.</span
-        >
-      </h1>
-      <Image
-        src={avatar}
-        format="webp"
-        alt="chy avatar"
-        class="w-28 rounded-full bg-orange-300 dark:bg-orange-100 transition ease-in"
-      />
-    </div>
-    <p class="mb-2 transition ease-in">
-      I'm a Melbourne-based software engineer with experience in working with
-      Javascript and Ruby building web applications.
-    </p>
-    <p class="mb-2 transition ease-in">
-      I'm a Senior Engineer at Culture Amp. I enjoy creating simple and
-      delightful web experiences and believe that the small things make the most
-      significant difference.
-    </p>
-    <p class="mb-6 transition ease-in">
-      Outside of work, I'm interested in playing basketball 🏀, getting outside
-      when I'm not typing on my keyboard ⛰️ and hanging out with my doggo 🐶.
-    </p>
-
-    <section class="">
-      <h2 class="text-xl font-bold mb-2 transition ease-in">Contact me</h2>
-      <ul class="list-none leading-loose">
-        <li class="text-pink dark:text-white transition ease-in">
-          <a
-            href="mailto:chymeng24@gmail.com?Subject=Saying%20hello"
-            target="_blank">Email</a
-          >
-        </li>
-        <li class="text-pink dark:text-white transition ease-in">
-          <a href="https://github.com/chy-m" target="_blank">Github</a>
-        </li>
-        <li class="text-pink dark:text-white transition ease-in">
-          <a
-            href="https://www.linkedin.com/in/chy-meng-6323b8a7"
-            target="_blank">Linked In</a
-          >
-        </li>
-      </ul>
-    </section>
+    <Header />
+    <Body />
+    <Contact />
   </main>
-  <footer class="sticky top-[100vh]">
-    <div class="flex flex-wrap">
-      <p class="text-gray-600/70">© 2023 Made with</p>
-      <Heart />
-      <p class="text-gray-600/70">by Chy Meng. All rights reserved.</p>
-    </div>
-  </footer>
+  <Footer />
 </Layout>

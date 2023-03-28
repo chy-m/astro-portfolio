@@ -1,0 +1,20 @@
+---
+import { Image } from "@astrojs/image/components";
+import avatar from "../assets/avatar.webp";
+---
+
+<div class="flex flex-wrap items-center mb-8">
+  <h1
+    class="text-2xl md:text-5xl font-extrabold leading-tight mr-7 transition ease-in"
+  >
+    👋 Hello, <span class="whitespace-nowrap bg-pink rounded-xl p-1">
+      I'm Chy.</span
+    >
+  </h1>
+  <Image
+    src={avatar}
+    format="webp"
+    alt="chy avatar"
+    class="w-28 rounded-full bg-orange-300 dark:bg-orange-100 transition ease-in"
+  />
+</div>

@@ -1,3 +1,7 @@
+---
+import SunRay from "../components/SunRay.astro";
+---
+
 <div
   class="toggle-theme absolute top-4 right-4 flex items-center justify-center w-10 h-10 cursor-pointer"
 >
@@ -5,12 +9,12 @@
     class="moon absolute origin-right rounded-full top-0 right-0 w-7 h-7 z-10"
   ></span>
   <span class="sun w-10 h-10 rounded-full"></span>
-  <small class="sun-ray absolute w-0.5 -z-10"></small>
-  <small class="sun-ray absolute w-0.5 -z-10"></small>
-  <small class="sun-ray absolute w-0.5 -z-10"></small>
-  <small class="sun-ray absolute w-0.5 -z-10"></small>
-  <small class="sun-ray absolute w-0.5 -z-10"></small>
-  <small class="sun-ray absolute w-0.5 -z-10"></small>
+  <SunRay />
+  <SunRay />
+  <SunRay />
+  <SunRay />
+  <SunRay />
+  <SunRay />
 </div>
 
 <script>
@@ -24,8 +28,6 @@
   }
 
   darkMode.addEventListener("click", darkify);
-
-  // darkify();
 </script>
 <style is:global lang="scss">
   :root {

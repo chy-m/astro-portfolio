@@ -3,7 +3,7 @@ import SunRay from "../components/SunRay.astro";
 ---
 
 <div
-  class="toggle-theme absolute top-4 right-4 flex items-center justify-center w-10 h-10 cursor-pointer"
+  class="toggle-theme-switch absolute top-4 right-4 flex items-center justify-center w-10 h-10 cursor-pointer"
 >
   <span
     class="moon absolute origin-right rounded-full top-0 right-0 w-7 h-7 z-10"
@@ -20,31 +20,22 @@ import SunRay from "../components/SunRay.astro";
 <script>
   import { togglePreference } from "../../lib/theme-util";
 
-  const darkMode = document.querySelector(".toggle-theme");
-
-  function darkify() {
-    document.documentElement.classList.toggle("theme-night");
-    togglePreference();
-  }
-
-  darkMode.addEventListener("click", darkify);
+  document
+    .querySelector(".toggle-theme-switch")
+    .addEventListener("click", togglePreference);
 </script>
 <style is:global lang="scss">
   :root {
     --color-primary: #ffffff;
     --color-secondary: #eec413;
 
-    &.theme-night {
+    &[data-theme="dark"] {
       --color-primary: #0a0f1b;
       --color-secondary: #ffffff;
     }
   }
 
-  body {
-    background: var(--color-primary);
-  }
-
-  .toggle-theme {
+  .toggle-theme-switch {
     transform: translate(50%, -50%);
 
     .sun {
@@ -86,8 +77,8 @@ import SunRay from "../components/SunRay.astro";
     }
   }
 
-  .theme-night {
-    .toggle-theme {
+  [data-theme="dark"] {
+    .toggle-theme-switch {
       background-color: var(--color-primary);
 
       .sun-ray {
@@ -105,7 +96,7 @@ import SunRay from "../components/SunRay.astro";
       }
     }
 
-    .toggle-theme:hover {
+    .toggle-theme-switch:hover {
       .moon {
         transform: scale(1) translate(-3%, -18%);
       }
